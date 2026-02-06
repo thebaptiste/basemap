@@ -1,5 +1,5 @@
 basemap_data >= 2.0, < 3.0
-packaging >= 20.5, < 26.0
+packaging >= 20.5
 
 numpy >= 2.0, < 2.4
 matplotlib >= 3.4, < 3.11
