@@ -48,7 +48,7 @@ import _geoslib
 from . proj import Proj
 
 
-__version__ = "2.0.1"
+__version__ = "2.0.2"
 
 # basemap data files now installed in lib/matplotlib/toolkits/basemap/data
 # check to see if environment variable BASEMAPDATA set to a directory,
@@ -1304,8 +1304,7 @@ class Basemap(object):
                 # numpy array (first column is lons, second is lats).
                 polystring = bdatfile.read(bytecount)
                 # binary data is little endian.
-                b = np.array(np.frombuffer(polystring,dtype='<f4'),'f8')
-                b.shape = (npts,2)
+                b = np.array(np.frombuffer(polystring,dtype='<f4'),'f8').reshape(npts, 2)
                 b2 = b.copy()
                 # merge polygons that cross dateline.
                 poly = Shape(b)

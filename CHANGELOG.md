@@ -12,6 +12,16 @@ https://semver.org/spec/v2.0.0.html
 
 ## [Unreleased]
 
+## [2.0.2] - 2026-03-02
+
+### Changed
+- Upgrade upper limit for `numpy` to 2.5 (from juntyr:numpy-2.4).
+
+## [2.0.1] - 2026-02-06
+
+### Changed
+- Remove upper limit for `packaging` (allow 26.0).
+
 ## [2.0.0] - 2025-06-13
 
 ### Added
