@@ -208,7 +208,7 @@ setup(**{
     "python_requires":
         ", ".join([
             ">=3.9",
-            "<3.14",
+            "<3.15",
         ]),
     "install_requires":
         get_content("dep/requirements.txt", splitlines=True),
