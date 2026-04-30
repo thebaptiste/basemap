@@ -109,7 +109,10 @@ else:
     try:
         import numpy
         include_dirs.append(numpy.get_include())
-        warnings.warn("NumPy headers", numpy.get_include())
+    except ImportError as err:
+        cmds = ("bdist_wheel", "build", "install")
+        if any(cmd in sys.argv[1:] for cmd in cmds):
+            warnings.warn("unable to locate NumPy headers", RuntimeWarning)
 
 # Define GEOS include, library and runtime dirs.
 geos_install_prefix = get_geos_install_prefix()
